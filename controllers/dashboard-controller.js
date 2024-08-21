@@ -4,7 +4,7 @@ export const dashboardController = {
   async index(request, response) {
     const viewData = {
       title: "Station Dashboard",
-      stations: awa
+      stations: await stationStore.getAllStations(),
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
